@@ -11,8 +11,6 @@ class PagesController extends Controller
     {
         $trains = Train::all();
 
-        dd($trains);
-
         return view('homepage', compact('trains'));
     }
 }

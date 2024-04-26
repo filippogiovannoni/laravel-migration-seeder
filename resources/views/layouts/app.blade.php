@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>@yield('pageTitle', 'LaraTrains')</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -20,6 +20,30 @@
 </head>
 
 <body class="antialiased">
+
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light bg-dark">
+            <div class="container">
+                <a class="navbar-brand text-white" href="#">LaraTrains</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarID"
+                    aria-controls="navbarID" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarID">
+                    <div class="navbar-nav">
+                        <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        @yield('content')
+    </main>
+
+    <footer></footer>
 
 </body>
 
